@@ -71,15 +71,14 @@ public class Main {
     // Bài 4
     public static String removeDuplicateChar(String inpStr) {
 
-        String resultString = "";
+        StringBuilder resultString = new StringBuilder();
         for(int i = 0; i < inpStr.length(); i++) {
-            // Nếu số không xuất hiện trong string sẽ cộng dồn.
-            if(!resultString.contains(String.valueOf(inpStr.charAt(i)))) {
-                resultString += inpStr.charAt(i);
+            if(!resultString.toString().contains(String.valueOf(inpStr.charAt(i)))) {
+                resultString.append(inpStr.charAt(i));
             }
         }
 
-        return resultString;
+        return resultString.toString();
     }
 
     // Bài 5
