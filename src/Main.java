@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
 
         System.out.println("=============== Bài 1 ================");
-        int[] listNumBai1 = {-1, 5,1,8,4,9, 3,1,5};
+        int[] listNumBai1 = {1, -1,10,10, 5,1,8,4,9, 3,1,5};
         int resultBai1 = sumDistinctElements(listNumBai1);
         System.out.println("Kết quả bài 1, tổng khác nhau của " + Arrays.toString(listNumBai1) + " là : " + resultBai1);
 
@@ -32,14 +32,14 @@ public class Main {
     public static int sumDistinctElements(int[] intArr) {
 
         int sum = 0;
-        String numCheck = "";
+        StringBuilder numCheck = new StringBuilder();
         for(int i = 0; i < intArr.length; i++) {
             // thêm "_" trước và sau để có sự khác nhau giữa -1, 1, 10, -10
             String checkStr = "_" + String.valueOf(intArr[i]) + "_";
             // Nếu số không xuất hiện trong string sẽ cộng dồn.
-            if(!numCheck.contains(checkStr)) {
+            if(!numCheck.toString().contains(checkStr)) {
                 sum += intArr[i];
-                numCheck += checkStr;
+                numCheck.append(checkStr);
             }
         }
 
@@ -95,7 +95,5 @@ public class Main {
 
         System.out.println("Before Swap, str1 : " + inpStr1Before + ", str2: " + inpStr2Before);
         System.out.println("After Swapped, Swapped str1 : " + inpStr1 + ", Swapped str2: " + inpStr2);
-
-
     }
 }
