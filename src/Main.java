@@ -60,7 +60,6 @@ public class Main {
     public static void printNumOfEvenAndOdd(int[] arrInt) {
         int numEven = 0;
         for(int i = 0; i < arrInt.length; i++) {
-            // Nếu số không xuất hiện trong string sẽ cộng dồn.
             if(arrInt[i] % 2 == 0) {
                 numEven++;
             }
