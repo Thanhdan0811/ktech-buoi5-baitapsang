@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
 
         System.out.println("=============== Bài 1 ================");
-        int[] listNumBai1 = {5,1,8,4,9, 3,1,5};
+        int[] listNumBai1 = {-1, 5,1,8,4,9, 3,1,5};
         int resultBai1 = sumDistinctElements(listNumBai1);
         System.out.println("Kết quả bài 1, tổng khác nhau của " + Arrays.toString(listNumBai1) + " là : " + resultBai1);
 
@@ -34,10 +34,12 @@ public class Main {
         int sum = 0;
         String numCheck = "";
         for(int i = 0; i < intArr.length; i++) {
+            // thêm "_" trước và sau để có sự khác nhau giữa -1, 1, 10, -10
+            String checkStr = "_" + String.valueOf(intArr[i]) + "_";
             // Nếu số không xuất hiện trong string sẽ cộng dồn.
-            if(!numCheck.contains(String.valueOf(intArr[i]))) {
+            if(!numCheck.contains(checkStr)) {
                 sum += intArr[i];
-                numCheck += String.valueOf(intArr[i]);
+                numCheck += checkStr;
             }
         }
 
@@ -46,14 +48,14 @@ public class Main {
 
     // Bài 2
     public static String printLetterTwice(String inStr) {
-        String resultStr = "";
+        StringBuilder resultStr = new StringBuilder();
 
         for(int i = 0; i < inStr.length(); i++) {
             String indexStr = String.valueOf(inStr.charAt(i));
-            resultStr += (indexStr + indexStr);
+            resultStr.append(indexStr).append(indexStr);
         }
 
-        return resultStr;
+        return resultStr.toString();
     }
 
     // Bài 3
