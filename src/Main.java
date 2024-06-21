@@ -8,21 +8,21 @@ public class Main {
         int resultBai1 = sumDistinctElements(listNumBai1);
         System.out.println("Kết quả bài 1, tổng khác nhau của " + Arrays.toString(listNumBai1) + " là : " + resultBai1);
 
-        System.out.println("=============== Bài 2 ================");
+        System.out.println("\n=============== Bài 2 ================");
         String strBai2 = "hello"; // hheelllloo
         System.out.println("Kết quả bài 2, với input " + strBai2 + " kết quả là : " + printLetterTwice(strBai2));
 
 
-        System.out.println("=============== Bài 3 ================");
-        int[] listNumBai3 = {1,2,3,4,5,6,7,8,9};
+        System.out.println("\n=============== Bài 3 ================");
+        int[] listNumBai3 = {1,2,12,9,124,12,3,123,12};
         printNumOfEvenAndOdd(listNumBai3);
 
-        System.out.println("=============== Bài 4 ================");
+        System.out.println("\n=============== Bài 4 ================");
         String strBai4 = "characters";
         String resultBai4 = removeDuplicateChar(strBai4);
         System.out.println("Kết quả bài 4, với input " + strBai4 + " kết quả là : " + resultBai4);
 
-        System.out.println("=============== Bài 5 ================");
+        System.out.println("\n=============== Bài 5 ================");
         String str1 = "Hello", str2 = "World";
         swapStringNoThird(str1, str2);
 
